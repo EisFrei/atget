@@ -3,7 +3,13 @@ atget
 
 An easier way of getting object attributes
 
-	var atget = require('./atget');
+## Install
+    
+    npm install atget
+
+## Usage
+
+	var atget = require('atget');
 	var obj = {
 		a: {
 			b: {
