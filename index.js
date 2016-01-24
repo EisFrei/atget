@@ -6,7 +6,7 @@ function atget(obj, keyString, def) {
 	var tObj = obj;
 	for (var i = 0; i < keys.length; i++) {
 		tObj = tObj[keys[i]];
-		if (typeof(tObj) === 'undefined') {
+		if (typeof(tObj) === 'undefined' || tObj === null) {
 			return def;
 		}
 	}

@@ -4,11 +4,14 @@ var obj = {
 	a: {
 		b: {
 			c: 1
-		}
+		},
+		'null': null
 	}
-}
+};
+
 var key = 'a.b.c';
 var missingKey = 'nope.nothing.here';
+var missingKey2 = 'a.null.b';
 var defaultValue = 'not found';
 
 // call as function
@@ -33,4 +36,7 @@ assert.equal(atget(obj).get(key), 1);
 // returns 1
 
 assert.equal(atget(obj).get(missingKey, defaultValue), defaultValue);
+// returns 'not found'
+
+assert.equal(atget(obj).get(missingKey2, defaultValue), defaultValue);
 // returns 'not found'
